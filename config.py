@@ -32,3 +32,39 @@ rules_emoji_id = 453946311524220949
 
 # List of extensions to load
 extensions = ["modules.iamroles", "modules.rules"]
+
+# Gifs for pokes
+pokes = [
+    "https://cdn.weeb.sh/images/rJ0hlsnR-.gif",
+    "https://cdn.weeb.sh/images/Hk2HekKD-.gif",
+    "https://cdn.weeb.sh/images/HJZpLxkKDb.gif",
+    "https://cdn.weeb.sh/images/BJhIekKwb.gif",
+    "https://cdn.weeb.sh/images/SyQzRaFFb.gif",
+    "https://media.tenor.com/images/c46116b9116e1baa24e96fa6c5a78818/tenor.gif",
+]
+
+# Gifs for hugs
+hugs = [
+    "https://cdn.weeb.sh/images/rJ0hlsnR-.gif",
+    "https://cdn.weeb.sh/images/rkYetOXwW.gif",
+    "https://cdn.weeb.sh/images/rkIK_u7Pb.gif",
+    "https://media1.tenor.com/images/24ac13447f9409d41c1aecb923aedf81/tenor.gif",
+    "https://i.imgur.com/Ye1N4YC.gif",
+    "https://i.imgur.com/CLqefF4.gif",
+    "https://i.imgur.com/WyA3l1O.gif",
+]
+
+# Gifs for cuddles
+cuddles = [
+    "https://cdn.weeb.sh/images/BkkgL8mDW.gif",
+    "https://i.imgur.com/3o2OiI6.gif",
+    "https://i.imgur.com/y8FX9qX.gif",
+]
+
+# Gifs for kisses
+kisses = [
+    "https://cdn.discordapp.com/attachments/766427578286080051/766482813205086218/tenor.gif",
+    "https://i.imgur.com/7GhTplD.gif",
+    "https://i.imgur.com/EwQPLZI.gif",
+    "https://i.imgur.com/gWIm5bK.gif",
+]
