@@ -31,7 +31,7 @@ rules_message_id = 674791049717219348
 rules_emoji_id = 453946311524220949
 
 # List of extensions to load
-extensions = ["modules.iamroles", "modules.rules"]
+extensions = ["modules.iamroles", "modules.rules", "modules.emotions"]
 
 # Gifs for pokes
 pokes = [
