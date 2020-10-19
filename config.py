@@ -27,6 +27,9 @@ member_role = 674800989567451173
 # Role for moderators
 mod_role = 441284727081533458
 
+# Role for mutes
+mute_role = 466080092582314014
+
 # Rules message ID
 rules_message_id = 674791049717219348
 
@@ -34,7 +37,12 @@ rules_message_id = 674791049717219348
 rules_emoji_id = 453946311524220949
 
 # List of extensions to load
-extensions = ["modules.iamroles", "modules.rules", "modules.emotions"]
+extensions = [
+    "modules.iamroles",
+    "modules.rules",
+    "modules.emotions",
+    "modules.moderation",
+]
 
 # Gifs for pokes
 pokes = [
