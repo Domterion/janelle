@@ -19,6 +19,7 @@ bot = "bot:main"
 
 [tool.flake8]
 max-line-length = 88
+extend-ignore = "E501"
 
 [tool.isort]
 include_trailing_comma = true

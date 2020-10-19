@@ -57,6 +57,17 @@ class Emotions(typed_commands.Cog[typed_commands.Context]):
         embed.set_image(url=random.choice(config.kisses))
         await ctx.send(embed=embed)
 
+    @typed_commands.guild_only()
+    @typed_commands.command()
+    async def pat(self, ctx: typed_commands.Context, member: discord.Member) -> None:
+        """Pat a member."""
+        embed = discord.Embed(
+            title=f"{ctx.author.display_name} pats {member.display_name}! Cute~",
+            color=discord.Colour.from_hsv(random.random(), 1, 1),
+        )
+        embed.set_image(url=random.choice(config.pats))
+        await ctx.send(embed=embed)
+
 
 def setup(bot: Janelle) -> None:
     bot.add_cog(Emotions(bot))
