@@ -7,9 +7,10 @@ import config
 from bot.bot import Janelle
 
 
-class IamRoles(typed_commands.Cog[typed_commands.Context]):
+class Moderation(typed_commands.Cog[typed_commands.Context]):
     def __init__(self, bot: Janelle) -> None:
         self.bot = bot
+        self.mute_role = discord.Object(config.mute_role)
 
     def cog_check(self, ctx: typed_commands.Context) -> bool:
         assert isinstance(ctx.author, discord.Member)
@@ -54,9 +55,7 @@ class IamRoles(typed_commands.Cog[typed_commands.Context]):
         """Mutes a member."""
         assert ctx.guild is not None
         reason = f"{ctx.author} ({ctx.author.id}): {reason}"
-        role = discord.utils.get(ctx.guild.roles, id=config.mute_role)
-        assert role is not None
-        await member.add_roles(role, reason=reason)
+        await member.add_roles(self.mute_role, reason=reason)
         await ctx.send("It haz been done. Coke anyone?")
 
     @typed_commands.guild_only()
@@ -67,13 +66,11 @@ class IamRoles(typed_commands.Cog[typed_commands.Context]):
         """Unmutes a member."""
         assert ctx.guild is not None
         reason = f"{ctx.author} ({ctx.author.id}): {reason}"
-        role = discord.utils.get(ctx.guild.roles, id=config.mute_role)
-        assert role is not None
-        await member.remove_roles(role, reason=reason)
+        await member.remove_roles(self.mute_role, reason=reason)
         await ctx.send(
             "Party in backyard? Oh, I suppose this is jail so better not :^)"
         )
 
 
 def setup(bot: Janelle) -> None:
-    bot.add_cog(IamRoles(bot))
+    bot.add_cog(Moderation(bot))
