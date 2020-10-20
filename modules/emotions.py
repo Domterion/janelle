@@ -68,6 +68,17 @@ class Emotions(typed_commands.Cog[typed_commands.Context]):
         embed.set_image(url=random.choice(config.pats))
         await ctx.send(embed=embed)
 
+    @typed_commands.guild_only()
+    @typed_commands.command()
+    async def dance(self, ctx: typed_commands.Context) -> None:
+        """Dance in front of everyone else."""
+        embed = discord.Embed(
+            title=f"{ctx.author.display_name} dances! Turn up the music, everybody!",
+            color=discord.Colour.from_hsv(random.random(), 1, 1),
+        )
+        embed.set_image(url=random.choice(config.dances))
+        await ctx.send(embed=embed)
+
 
 def setup(bot: Janelle) -> None:
     bot.add_cog(Emotions(bot))

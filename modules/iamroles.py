@@ -5,6 +5,7 @@ from discord.ext import typed_commands
 import config
 
 from bot.bot import Janelle
+from utils.converters import BetterRoleConverter
 
 
 class IamRoles(typed_commands.Cog[typed_commands.Context]):
@@ -27,7 +28,9 @@ class IamRoles(typed_commands.Cog[typed_commands.Context]):
 
     @typed_commands.guild_only()
     @typed_commands.command()
-    async def iam(self, ctx: typed_commands.Context, *, role: discord.Role) -> None:
+    async def iam(
+        self, ctx: typed_commands.Context, *, role: BetterRoleConverter
+    ) -> None:
         """Assign yourself a role."""
         if role.id not in config.roles:
             await ctx.send("Not today, cutie! That role is locked :(")
@@ -39,7 +42,9 @@ class IamRoles(typed_commands.Cog[typed_commands.Context]):
 
     @typed_commands.guild_only()
     @typed_commands.command()
-    async def iamnot(self, ctx: typed_commands.Context, *, role: discord.Role) -> None:
+    async def iamnot(
+        self, ctx: typed_commands.Context, *, role: BetterRoleConverter
+    ) -> None:
         """Remove a self-assignable role from yourself."""
         if role.id not in config.roles:
             await ctx.send("Not today, cutie! That role is locked :(")
