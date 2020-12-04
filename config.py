@@ -18,7 +18,7 @@ roles = [
     694109909910028320,  # Gamer
     694110677425717278,  # Sanctuary
     749602299739111434,  # Pong
-    766369036703236107,  # Traders
+    766369036703236107,  # Advertising
 ]
 
 # Member role ID to give on rule accepting
