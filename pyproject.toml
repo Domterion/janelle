@@ -7,9 +7,9 @@ license = "AGPL-3.0-or-later"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-"discord.py" = "^1.5.0"
 "discord.py-stubs" = "^1.5.0"
 discord-ext-typed-commands = "^1.0.2"
+"discord.py" = {git = "https://github.com/Rapptz/discord.py"}
 
 [tool.poetry.dev-dependencies]
 black = { version = "^20.8b1", allow-prereleases = true }
