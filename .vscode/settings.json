@@ -4,5 +4,5 @@
     "python.linting.mypyEnabled": true,
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
-    "python.pythonPath": "/home/jens/.cache/pypoetry/virtualenvs/janelle-D43tKTfV-py3.8/bin/python",
+    "python.pythonPath": "/home/jens/.cache/pypoetry/virtualenvs/janelle-D43tKTfV-py3.9/bin/python",
 }

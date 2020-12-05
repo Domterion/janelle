@@ -38,6 +38,17 @@ class Moderation(typed_commands.Cog[typed_commands.Context]):
 
     @typed_commands.guild_only()
     @typed_commands.command()
+    async def unban(
+        self, ctx: typed_commands.Context, member: discord.User, *, reason: str = ""
+    ) -> None:
+        """Unban a member from the server."""
+        assert ctx.guild is not None
+        reason = f"{ctx.author} ({ctx.author.id}): {reason}"
+        await ctx.guild.unban(member)
+        await ctx.send("Maybe they will do better now...")
+
+    @typed_commands.guild_only()
+    @typed_commands.command()
     async def softban(
         self, ctx: typed_commands.Context, member: discord.Member, *, reason: str = ""
     ) -> None:
