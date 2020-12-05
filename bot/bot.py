@@ -1,4 +1,5 @@
 import logging
+import traceback
 
 from discord import AllowedMentions
 from discord.ext.commands import errors
@@ -34,3 +35,5 @@ class Janelle(Bot[Context]):
 
         if isinstance(error, errors.RoleNotFound):
             await ctx.send(f'Could not find role "{error.argument}" :(')
+        else:
+            traceback.print_exception(type(error), error, None)
